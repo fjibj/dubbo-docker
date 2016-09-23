@@ -2,6 +2,8 @@
 
 set -e
 
+docker run --rm --name my-maven-project -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven maven mvn package
+
 REG_URL=index.csphere.cn
 IREG_URL=docker.nicescale.com
 TAGS="2.5.3 2.5"
